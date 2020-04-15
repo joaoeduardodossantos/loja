@@ -1,0 +1,48 @@
+
+<table class="table table-bordered table-hover">
+    <thread>
+        <tr>
+            <td>Nome</td>
+            <td>Descrição</td>
+            <td>Preço</td>
+            <td>Quantidade</td>
+            <td colspan="1">
+        </tr>
+    </thead>
+    <tbody>
+    	   	<% @produtos.each do |produto| %>
+        <tr>
+            <td><%= produto.nome %></td>
+            <td><%= produto.descricao %></td>
+            <td><%= produto.preco %></td>
+            <td><%= produto.quantidade %></td>
+            <td><a href="produtos/<%= produto.id %>/remover" %>  Remover</td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<div class="alert alert-success" role="alert">
+    <h3 class="alert-heading">Preco com descontos </h3>
+</div>
+
+<table class="table table-bordered table-hover">
+    <thread>
+        <tr>
+            <td>Nome</td>
+            <td>Descrição</td>
+            <td>Preço</td>
+            <td>Quantidade</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% @produto_com_desconto.each do |produto_desc| %>
+            <tr>
+                <td><%= produto_desc.nome %></td>
+                <td><%= produto_desc.descricao %></td>
+                <td><%= produto_desc.preco %></td>
+                <td><%= produto_desc.quantidade %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
