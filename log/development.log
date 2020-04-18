@@ -4088,3 +4088,320 @@ This autoloaded constant has been unloaded.
 
 Please, check the "Autoloading and Reloading Constants" guide for solutions.
  (called from <top (required)> at /home/joaoeduardo/estudo/loja/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <top (required)> at /home/joaoeduardo/estudo/loja/config/environment.rb:5)
+Started GET "/produtos/new.html" for ::1 at 2020-04-17 22:22:49 -0300
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProdutosController#new as HTML
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 52.9ms | Allocations: 9736)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 157ms (Views: 137.5ms | ActiveRecord: 4.4ms | Allocations: 23371)
+
+
+Started POST "/produtos" for ::1 at 2020-04-17 22:29:45 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProdutosController#create as HTML
+  Parameters: {"authenticity_token"=>"UvikP4WvCq2VXqz14W8rXkQI4Ej94b802avgFzvflomS0M3zHQ19gMM1Q7QqIytlxiSD5eVfv6MTdm29HtqBHg==", "produto"=>{"nome"=>"caderno", "descricao"=>"de escrever muito", "preco"=>"10.00", "quantidade"=>"100"}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:9:in `create'
+  [1m[36mProduto Create (38.0ms)[0m  [1m[32mINSERT INTO "produtos" ("nome", "descricao", "preco", "quantidade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "caderno"], ["descricao", "de escrever muito"], ["preco", 10.0], ["quantidade", 100], ["created_at", "2020-04-18 01:29:45.936752"], ["updated_at", "2020-04-18 01:29:45.936752"]]
+  ↳ app/controllers/produtos_controller.rb:9:in `create'
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 130ms (ActiveRecord: 49.4ms | Allocations: 8948)
+
+
+Started GET "/" for ::1 at 2020-04-17 22:29:46 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  Rendered produtos/index.html.erb within layouts/application (Duration: 35.4ms | Allocations: 4062)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms | Allocations: 5488)
+
+
+Started GET "/" for ::1 at 2020-04-17 22:30:21 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  Rendered produtos/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1236)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 1786)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<table class="table table-bordered table-hover">
+    <thread>
+        <tr>
+            <td>Nome</td>
+            <td>Descrição</td>
+            <td>Preço</td>
+            <td>Quantidade</td>
+            <td colspan="1">
+        </tr>
+    </thead>
+    <tbody>
+    	   	<% @produtos.each do |produto| %>
+        <tr>
+            <td><%= produto.nome %></td>
+            <td><%= produto.descricao %></td>
+            <td><%= produto.preco %></td>
+            <td><%= produto.quantidade %></td>
+            <td><a href="produtos/<%= produto.id %>/remover" %>  Remover</td>
+
+            <td><%= link_to "Remover", produto, method :delete %></td>
+
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<div class="alert alert-success" role="alert">
+    <h3 class="alert-heading">Preco com descontos </h3>
+</div>
+
+<table class="table table-bordered table-hover">
+    <thread>
+        <tr>
+            <td>Nome</td>
+            <td>Descrição</td>
+            <td>Preço</td>
+            <td>Quantidade</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% @produto_com_desconto.each do |produto_desc| %>
+            <tr>
+                <td><%= produto_desc.nome %></td>
+                <td><%= produto_desc.descricao %></td>
+                <td><%= produto_desc.preco %></td>
+                <td><%= produto_desc.quantidade %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+):
+1:    
+2:    <table class="table table-bordered table-hover">
+3:        <thread>
+4:            <tr>
+5:                <td>Nome</td>
+6:                <td>Descrição</td>
+7:                <td>Preço</td>
+8:                <td>Quantidade</td>
+9:                <td colspan="1">
+10:            </tr>
+11:        </thead>
+12:        <tbody>
+13:        	   	<% @produtos.each do |produto| %>
+14:            <tr>
+15:                <td><%= produto.nome %></td>
+16:                <td><%= produto.descricao %></td>
+17:                <td><%= produto.preco %></td>
+18:                <td><%= produto.quantidade %></td>
+19:                <td><a href="produtos/<%= produto.id %>/remover" %>  Remover</td>
+20:    
+21:                <td><%= link_to "Remover", produto, method :delete %></td>
+22:    
+23:            </tr>
+24:            <% end %>
+25:        </tbody>
+26:    </table>
+27:    
+28:    <div class="alert alert-success" role="alert">
+29:        <h3 class="alert-heading">Preco com descontos </h3>
+30:    </div>
+31:    
+32:    <table class="table table-bordered table-hover">
+33:        <thread>
+34:            <tr>
+35:                <td>Nome</td>
+36:                <td>Descrição</td>
+37:                <td>Preço</td>
+38:                <td>Quantidade</td>
+39:            </tr>
+40:        </thead>
+41:        <tbody>
+42:            <% @produto_com_desconto.each do |produto_desc| %>
+43:                <tr>
+44:                    <td><%= produto_desc.nome %></td>
+45:                    <td><%= produto_desc.descricao %></td>
+46:                    <td><%= produto_desc.preco %></td>
+47:                    <td><%= produto_desc.quantidade %></td>
+48:                </tr>
+49:            <% end %>
+50:        </tbody>
+51:    </table>
+  
+app/views/produtos/index.html.erb:21: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/views/produtos/index.html.erb:21: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/views/produtos/index.html.erb:21: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/views/produtos/index.html.erb:21: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/views/produtos/index.html.erb:21: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/views/produtos/index.html.erb:21: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+Started GET "/" for ::1 at 2020-04-17 22:31:25 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  Rendered produtos/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1236)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 2691)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<table class="table table-bordered table-hover">
+    <thread>
+        <tr>
+            <td>Nome</td>
+            <td>Descrição</td>
+            <td>Preço</td>
+            <td>Quantidade</td>
+            <td colspan="1">
+        </tr>
+    </thead>
+    <tbody>
+    	   	<% @produtos.each do |produto| %>
+        <tr>
+            <td><%= produto.nome %></td>
+            <td><%= produto.descricao %></td>
+            <td><%= produto.preco %></td>
+            <td><%= produto.quantidade %></td>
+            <td><%= link_to "Remover", produto, method :delete %></td>
+
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<div class="alert alert-success" role="alert">
+    <h3 class="alert-heading">Preco com descontos </h3>
+</div>
+
+<table class="table table-bordered table-hover">
+    <thread>
+        <tr>
+            <td>Nome</td>
+            <td>Descrição</td>
+            <td>Preço</td>
+            <td>Quantidade</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% @produto_com_desconto.each do |produto_desc| %>
+            <tr>
+                <td><%= produto_desc.nome %></td>
+                <td><%= produto_desc.descricao %></td>
+                <td><%= produto_desc.preco %></td>
+                <td><%= produto_desc.quantidade %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+):
+1:    
+2:    <table class="table table-bordered table-hover">
+3:        <thread>
+4:            <tr>
+5:                <td>Nome</td>
+6:                <td>Descrição</td>
+7:                <td>Preço</td>
+8:                <td>Quantidade</td>
+9:                <td colspan="1">
+10:            </tr>
+11:        </thead>
+12:        <tbody>
+13:        	   	<% @produtos.each do |produto| %>
+14:            <tr>
+15:                <td><%= produto.nome %></td>
+16:                <td><%= produto.descricao %></td>
+17:                <td><%= produto.preco %></td>
+18:                <td><%= produto.quantidade %></td>
+19:                <td><%= link_to "Remover", produto, method :delete %></td>
+20:    
+21:            </tr>
+22:            <% end %>
+23:        </tbody>
+24:    </table>
+25:    
+26:    <div class="alert alert-success" role="alert">
+27:        <h3 class="alert-heading">Preco com descontos </h3>
+28:    </div>
+29:    
+30:    <table class="table table-bordered table-hover">
+31:        <thread>
+32:            <tr>
+33:                <td>Nome</td>
+34:                <td>Descrição</td>
+35:                <td>Preço</td>
+36:                <td>Quantidade</td>
+37:            </tr>
+38:        </thead>
+39:        <tbody>
+40:            <% @produto_com_desconto.each do |produto_desc| %>
+41:                <tr>
+42:                    <td><%= produto_desc.nome %></td>
+43:                    <td><%= produto_desc.descricao %></td>
+44:                    <td><%= produto_desc.preco %></td>
+45:                    <td><%= produto_desc.quantidade %></td>
+46:                </tr>
+47:            <% end %>
+48:        </tbody>
+49:    </table>
+  
+app/views/produtos/index.html.erb:19: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/views/produtos/index.html.erb:19: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/views/produtos/index.html.erb:19: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/views/produtos/index.html.erb:19: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/views/produtos/index.html.erb:19: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/views/produtos/index.html.erb:19: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+Started GET "/" for ::1 at 2020-04-17 22:33:27 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.9ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.6ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:41
+  Rendered produtos/index.html.erb within layouts/application (Duration: 16.6ms | Allocations: 2180)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 46.9ms | ActiveRecord: 1.5ms | Allocations: 9444)
+
+
+Started DELETE "/produtos/7" for ::1 at 2020-04-17 22:33:35 -0300
+Processing by ProdutosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yrJq+R7CThGn0GSQeCT+tU2ENgwpXNtwmLmvj1id7XwKmgM1hmA5PPG7i9GzaP6Oz6hVoTHi2+dSZCIlfZj66w==", "id"=>"7"}
+  [1m[36mProduto Load (0.5ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:15:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:15:in `destroy'
+  [1m[36mProduto Destroy (2.0ms)[0m  [1m[31mDELETE FROM "produtos" WHERE "produtos"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/produtos_controller.rb:15:in `destroy'
+  [1m[35m (13.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:15:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 79ms (ActiveRecord: 16.4ms | Allocations: 9384)
+
+
+Started GET "/" for ::1 at 2020-04-17 22:33:36 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (1.7ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:41
+  Rendered produtos/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 1585)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 45.6ms | ActiveRecord: 2.1ms | Allocations: 7828)
+
+

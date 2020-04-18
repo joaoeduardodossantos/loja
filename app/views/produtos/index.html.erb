@@ -16,7 +16,9 @@
             <td><%= produto.descricao %></td>
             <td><%= produto.preco %></td>
             <td><%= produto.quantidade %></td>
-            <td><a href="produtos/<%= produto.id %>/remover" %>  Remover</td>
+            <td><%= link_to "Remover", produto, method: :delete
+                        %></td>
+
         </tr>
         <% end %>
     </tbody>
