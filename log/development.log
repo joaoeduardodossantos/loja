@@ -4789,3 +4789,634 @@ Processing by ProdutosController#index as HTML
 Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 0.8ms | Allocations: 8419)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <top (required)> at /home/joaoeduardo/estudo/loja/config/environment.rb:5)
+Started GET "/" for ::1 at 2020-04-20 14:16:59 -0300
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (1.0ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.6ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 58.8ms | Allocations: 7935)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 201ms (Views: 162.8ms | ActiveRecord: 3.8ms | Allocations: 23063)
+
+
+Started GET "/produtos/new" for ::1 at 2020-04-20 14:17:06 -0300
+Processing by ProdutosController#new as HTML
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 41.2ms | Allocations: 9584)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 67.5ms | ActiveRecord: 0.0ms | Allocations: 15599)
+
+
+Started POST "/produtos" for ::1 at 2020-04-20 14:17:38 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"authenticity_token"=>"aSGpgHQtVkpdOlSssHNv4NCyvoBfV+Awf0bq6eXdFpqmSfRF8+h4RT5tB4yLgqAjJl6S2uJ386Bvve2Un1RUfQ==", "produto"=>{"nome"=>"controel remoto tv", "descricao"=>"multi funcoes", "preco"=>"10.00", "quantidade"=>"50"}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:9:in `create'
+  [1m[36mProduto Create (2.9ms)[0m  [1m[32mINSERT INTO "produtos" ("nome", "descricao", "preco", "quantidade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "controel remoto tv"], ["descricao", "multi funcoes"], ["preco", 10.0], ["quantidade", 50], ["created_at", "2020-04-20 17:17:38.161986"], ["updated_at", "2020-04-20 17:17:38.161986"]]
+  ↳ app/controllers/produtos_controller.rb:9:in `create'
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 31ms (ActiveRecord: 12.3ms | Allocations: 3957)
+
+
+Started GET "/" for ::1 at 2020-04-20 14:17:38 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (2.0ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 2548)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 40.0ms | ActiveRecord: 2.4ms | Allocations: 8613)
+
+
+Started DELETE "/produtos/12" for ::1 at 2020-04-20 14:17:46 -0300
+Processing by ProdutosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DXqq8k+TAPeflew73gj9QGpsuiDTwsZgUsZPXdfxmDxVgXdqKaeB9TBh/0mEi+sBEtgY7VAKX06+E9wK3JL5MQ==", "id"=>"12"}
+  [1m[36mProduto Load (0.6ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:15:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:15:in `destroy'
+  [1m[36mProduto Destroy (0.8ms)[0m  [1m[31mDELETE FROM "produtos" WHERE "produtos"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/produtos_controller.rb:15:in `destroy'
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:15:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 40ms (ActiveRecord: 14.1ms | Allocations: 4440)
+
+
+Started GET "/" for ::1 at 2020-04-20 14:17:46 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.6ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 2358)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 36.3ms | ActiveRecord: 1.1ms | Allocations: 8420)
+
+
+Started DELETE "/produtos/8" for ::1 at 2020-04-20 14:24:01 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProdutosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kGGhJ50wYcz5gfNSyWENEuh/zXEBd7qFoHWiDNV62CTImny/+wTgzlZ14CCT4htTkMtvvIK/I6tMoDFb3hm5KQ==", "id"=>"8"}
+  [1m[36mProduto Load (0.5ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:15:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:15:in `destroy'
+  [1m[36mProduto Destroy (2.4ms)[0m  [1m[31mDELETE FROM "produtos" WHERE "produtos"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/produtos_controller.rb:15:in `destroy'
+  [1m[35m (13.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:15:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 41ms (ActiveRecord: 16.8ms | Allocations: 3724)
+
+
+Started GET "/" for ::1 at 2020-04-20 14:24:01 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.9ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.8ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 16.0ms | Allocations: 2209)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 54.0ms | ActiveRecord: 1.6ms | Allocations: 8455)
+
+
+Started GET "/" for ::1 at 2020-04-20 14:32:32 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (1.5ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.8ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 49.0ms | Allocations: 6546)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 97ms (Views: 78.6ms | ActiveRecord: 2.4ms | Allocations: 13530)
+
+
+Started DELETE "/produtos/11" for ::1 at 2020-04-20 14:32:46 -0300
+Processing by ProdutosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"K5KgkZEd0dacSZU4vBkvunyBnGexS6LJOj4dEQaZpipzaX0J9ylQ1DO9hkrmmjn7BDU+qjKDO+fW645GDfrHJw==", "id"=>"11"}
+  [1m[36mProduto Load (0.5ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:15:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:15:in `destroy'
+  [1m[36mProduto Destroy (3.6ms)[0m  [1m[31mDELETE FROM "produtos" WHERE "produtos"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/produtos_controller.rb:15:in `destroy'
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:15:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 37ms (ActiveRecord: 16.4ms | Allocations: 3825)
+
+
+Started GET "/" for ::1 at 2020-04-20 14:32:46 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1983)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.7ms | Allocations: 8045)
+
+
+Started GET "/produtos/new" for ::1 at 2020-04-20 14:33:14 -0300
+Processing by ProdutosController#new as HTML
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 19.2ms | Allocations: 1088)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 79.3ms | ActiveRecord: 0.0ms | Allocations: 7072)
+
+
+Started POST "/produtos" for ::1 at 2020-04-20 14:33:29 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"authenticity_token"=>"ysyEItLKbwt5r6hzr+JAQyHdUGo5VSr3cG/iQU8/FZUFpNnnVQ9BBBr4+1OUE4+A1zF8MIR1OWdglOU8NbZXcg==", "produto"=>{"nome"=>"caneta", "descricao"=>"colorida", "preco"=>"1.99", "quantidade"=>"100"}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:9:in `create'
+  [1m[36mProduto Create (13.3ms)[0m  [1m[32mINSERT INTO "produtos" ("nome", "descricao", "preco", "quantidade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "caneta"], ["descricao", "colorida"], ["preco", 1.99], ["quantidade", 100], ["created_at", "2020-04-20 17:33:29.053528"], ["updated_at", "2020-04-20 17:33:29.053528"]]
+  ↳ app/controllers/produtos_controller.rb:9:in `create'
+  [1m[35m (18.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 60ms (ActiveRecord: 32.0ms | Allocations: 3749)
+
+
+Started GET "/" for ::1 at 2020-04-20 14:33:29 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.6ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.5ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 75.9ms | Allocations: 2354)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 187ms (Views: 181.4ms | ActiveRecord: 1.2ms | Allocations: 8415)
+
+
+Started GET "/produtos/new" for ::1 at 2020-04-20 14:33:32 -0300
+Processing by ProdutosController#new as HTML
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 24.0ms | Allocations: 1081)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 46.9ms | ActiveRecord: 0.0ms | Allocations: 7059)
+
+
+Started POST "/produtos" for ::1 at 2020-04-20 14:33:48 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"authenticity_token"=>"1QKknWzdcoCfezzL50xQQEGCJuOjckmbaVEqwjUdstUaavlY6xhcj/wsb+vcvZ+Dt24KuR5SWgt5qi2/T5TwMg==", "produto"=>{"nome"=>"cadeira", "descricao"=>"confortavel", "preco"=>"500.00", "quantidade"=>"20"}, "commit"=>"Criar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:9:in `create'
+  [1m[36mProduto Create (1.4ms)[0m  [1m[32mINSERT INTO "produtos" ("nome", "descricao", "preco", "quantidade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "cadeira"], ["descricao", "confortavel"], ["preco", 500.0], ["quantidade", 20], ["created_at", "2020-04-20 17:33:48.778801"], ["updated_at", "2020-04-20 17:33:48.778801"]]
+  ↳ app/controllers/produtos_controller.rb:9:in `create'
+  [1m[35m (17.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:9:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 38ms (ActiveRecord: 18.8ms | Allocations: 3726)
+
+
+Started GET "/" for ::1 at 2020-04-20 14:33:48 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 2365)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 42.7ms | ActiveRecord: 0.7ms | Allocations: 8424)
+
+
+Started GET "/" for ::1 at 2020-04-20 14:35:37 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.6ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.5ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 17.1ms | Allocations: 2735)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 50.5ms | ActiveRecord: 1.1ms | Allocations: 10459)
+
+
+Started GET "/" for ::1 at 2020-04-20 14:40:37 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.5ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 18.0ms | Allocations: 2730)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 53.0ms | ActiveRecord: 0.9ms | Allocations: 10209)
+
+
+Started GET "/" for ::1 at 2020-04-20 14:45:58 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.7ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.8ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 41.1ms | Allocations: 7269)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 4.2ms | Allocations: 13581)
+
+
+Started GET "/" for ::1 at 2020-04-20 14:46:07 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.5ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 28.5ms | Allocations: 2373)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.9ms | Allocations: 4074)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>Loja</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= nav_bar brand: "Loja", brand_link: root_url  do %>
+      <%= menu_group do %>
+        <%= menu_item "Criar novo produto",  new_produto_path %>
+      <% end %>
+      
+        <%= form_tag busca_produto_path, class:"navbar-form">
+        <div class="form-group">
+      <%= text_field_tag :nome, nil, class: "form-control" %>
+      <%= button_to "Buscar", nil, class: "btn btn-default" %>
+    <% end %>
+
+    <div class="container">
+    <%= yield %>
+    </div>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>Loja</title>
+5:        <%= csrf_meta_tags %>
+6:        <%= csp_meta_tag %>
+7:    
+8:        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+9:        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+10:      </head>
+11:    
+12:      <body>
+13:        <%= nav_bar brand: "Loja", brand_link: root_url  do %>
+14:          <%= menu_group do %>
+15:            <%= menu_item "Criar novo produto",  new_produto_path %>
+16:          <% end %>
+17:          
+18:            <%= form_tag busca_produto_path, class:"navbar-form">
+19:            <div class="form-group">
+20:          <%= text_field_tag :nome, nil, class: "form-control" %>
+21:          <%= button_to "Buscar", nil, class: "btn btn-default" %>
+22:        <% end %>
+23:    
+24:        <div class="container">
+25:        <%= yield %>
+26:        </div>
+27:      </body>
+28:    </html>
+  
+app/views/layouts/application.html.erb:19: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:20: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:20: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:20: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:20: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:20: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:20: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for ::1 at 2020-04-20 14:52:16 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.9ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.5ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 24.8ms | Allocations: 2787)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.4ms | Allocations: 5403)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>Loja</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= nav_bar brand: "Loja", brand_link: root_url  do %>
+      <%= menu_group do %>
+        <%= menu_item "Criar novo produto",  new_produto_path %>
+      <% end %>
+      
+        <%= form_tag busca_produto_path, class:"navbar-form">
+           <div class:"form-group">
+              <%= text_field_tag :nome, nil, class: "form-control" %>
+              <%= button_to "Buscar", nil, class: "btn btn-default" %>
+           </div>
+        <% end %>
+      <% end %>
+    <div class="container">
+    <%= yield %>
+    </div>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>Loja</title>
+5:        <%= csrf_meta_tags %>
+6:        <%= csp_meta_tag %>
+7:    
+8:        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+9:        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+10:      </head>
+11:    
+12:      <body>
+13:        <%= nav_bar brand: "Loja", brand_link: root_url  do %>
+14:          <%= menu_group do %>
+15:            <%= menu_item "Criar novo produto",  new_produto_path %>
+16:          <% end %>
+17:          
+18:            <%= form_tag busca_produto_path, class:"navbar-form">
+19:               <div class:"form-group">
+20:                  <%= text_field_tag :nome, nil, class: "form-control" %>
+21:                  <%= button_to "Buscar", nil, class: "btn btn-default" %>
+22:               </div>
+23:            <% end %>
+24:          <% end %>
+25:        <div class="container">
+26:        <%= yield %>
+27:        </div>
+28:      </body>
+29:    </html>
+  
+app/views/layouts/application.html.erb:19: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:20: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:20: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:20: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:20: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:20: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:19: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:20: syntax error, unexpected '<'
+app/views/layouts/application.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:32: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/" for ::1 at 2020-04-20 14:54:50 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (1.2ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 20.4ms | Allocations: 2741)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.6ms | Allocations: 5349)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>Loja</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= nav_bar brand: "Loja", brand_link: root_url  do %>
+        <%= menu_group do %>
+           <%= menu_item "Criar novo produto",  new_produto_path %>
+        <% end %>
+      
+        <%= form_tag busca_produto_path, class:"navbar-form" %>
+           <div class:"form-group">
+              <%= text_field_tag :nome, nil, class: "form-control" %>
+              <%= button_to "Buscar", nil, class: "btn btn-default" %>
+           </div>
+        <% end %>
+      <% end %>
+    <div class="container">
+    <%= yield %>
+    </div>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>Loja</title>
+5:        <%= csrf_meta_tags %>
+6:        <%= csp_meta_tag %>
+7:    
+8:        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+9:        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+10:      </head>
+11:    
+12:      <body>
+13:        <%= nav_bar brand: "Loja", brand_link: root_url  do %>
+14:            <%= menu_group do %>
+15:               <%= menu_item "Criar novo produto",  new_produto_path %>
+16:            <% end %>
+17:          
+18:            <%= form_tag busca_produto_path, class:"navbar-form" %>
+19:               <div class:"form-group">
+20:                  <%= text_field_tag :nome, nil, class: "form-control" %>
+21:                  <%= button_to "Buscar", nil, class: "btn btn-default" %>
+22:               </div>
+23:            <% end %>
+24:          <% end %>
+25:        <div class="container">
+26:        <%= yield %>
+27:        </div>
+28:      </body>
+29:    </html>
+  
+app/views/layouts/application.html.erb:32: syntax error, unexpected keyword_end, expecting end-of-input
+app/views/layouts/application.html.erb:32: syntax error, unexpected keyword_end, expecting end-of-input
+app/views/layouts/application.html.erb:32: syntax error, unexpected keyword_end, expecting end-of-input
+app/views/layouts/application.html.erb:32: syntax error, unexpected keyword_end, expecting end-of-input
+app/views/layouts/application.html.erb:32: syntax error, unexpected keyword_end, expecting end-of-input
+app/views/layouts/application.html.erb:32: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/" for ::1 at 2020-04-20 15:01:09 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.9ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.6ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 17.5ms | Allocations: 2771)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 51.0ms | ActiveRecord: 1.4ms | Allocations: 10720)
+
+
+Started GET "/" for ::1 at 2020-04-20 15:03:37 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.8ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 2730)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.2ms | Allocations: 5309)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>Loja</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= nav_bar brand: "Loja", brand_link: root_url  do %>
+        <%= menu_group do %>
+           <%= menu_item "Criar novo produto",  new_produto_path %>
+        <% end %>
+      
+        <%= form_tag busca_produto_path, class:"navbar-form navbar-right" do %>
+           <div class="form-group">
+              <%= text_field_tag :nome, nil, class: "form-control" %>
+              <%= button_to "Buscar", nil, class: "btn btn-default" %>
+           </div>
+        <% end %>
+    <div class="container">
+    <%= yield %>
+    </div>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>Loja</title>
+5:        <%= csrf_meta_tags %>
+6:        <%= csp_meta_tag %>
+7:    
+8:        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+9:        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+10:      </head>
+11:    
+12:      <body>
+13:        <%= nav_bar brand: "Loja", brand_link: root_url  do %>
+14:            <%= menu_group do %>
+15:               <%= menu_item "Criar novo produto",  new_produto_path %>
+16:            <% end %>
+17:          
+18:            <%= form_tag busca_produto_path, class:"navbar-form navbar-right" do %>
+19:               <div class="form-group">
+20:                  <%= text_field_tag :nome, nil, class: "form-control" %>
+21:                  <%= button_to "Buscar", nil, class: "btn btn-default" %>
+22:               </div>
+23:            <% end %>
+24:        <div class="container">
+25:        <%= yield %>
+26:        </div>
+27:      </body>
+28:    </html>
+  
+app/views/layouts/application.html.erb:31: syntax error, unexpected end-of-input, expecting keyword_end
+app/views/layouts/application.html.erb:31: syntax error, unexpected end-of-input, expecting keyword_end
+app/views/layouts/application.html.erb:31: syntax error, unexpected end-of-input, expecting keyword_end
+app/views/layouts/application.html.erb:31: syntax error, unexpected end-of-input, expecting keyword_end
+app/views/layouts/application.html.erb:31: syntax error, unexpected end-of-input, expecting keyword_end
+app/views/layouts/application.html.erb:31: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for ::1 at 2020-04-20 15:04:32 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.9ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.5ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 33.4ms | Allocations: 2730)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 64.9ms | ActiveRecord: 1.4ms | Allocations: 10364)
+
+
