@@ -6610,3 +6610,53 @@ Processing by ProdutosController#index as HTML
 Completed 200 OK in 44ms (Views: 39.9ms | ActiveRecord: 0.9ms | Allocations: 8495)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <top (required)> at /home/joaoeduardo/estudo/loja/config/environment.rb:5)
+Started GET "/produtos/new" for 127.0.0.1 at 2020-04-21 00:19:01 -0300
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProdutosController#new as HTML
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 202.6ms | Allocations: 90025)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 314ms (Views: 270.3ms | ActiveRecord: 2.2ms | Allocations: 110650)
+
+
+Started POST "/produtos" for 127.0.0.1 at 2020-04-21 00:19:04 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"authenticity_token"=>"5foGqvyy5kpAHU9YuN8OFeoIkVjUF8CLR2yuMLAXSkPiPDjYLUKvQ1NnA5H+UHIZqkBSb1M+f7xRlBoTtq2Z3g==", "produto"=>{"nome"=>"", "descricao"=>"", "preco"=>"", "quantidade"=>""}, "commit"=>"Criar"}
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1251)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 38.2ms | ActiveRecord: 0.0ms | Allocations: 8533)
+
+
+Started GET "/produtos/new" for 127.0.0.1 at 2020-04-21 00:20:24 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProdutosController#new as HTML
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 20.1ms | Allocations: 1139)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 116ms (Views: 65.1ms | ActiveRecord: 3.4ms | Allocations: 13381)
+
+
+Started POST "/produtos" for 127.0.0.1 at 2020-04-21 00:20:26 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"authenticity_token"=>"AFYbHgIsQl4g/kwmSqa/rC4xIetMfxBoHlxdp+JQYBMHkCVs09wLVzOEAO8MKcOgbnni3MtWr18IpOmE5Oqzjg==", "produto"=>{"nome"=>"", "descricao"=>"", "preco"=>"", "quantidade"=>""}, "commit"=>"Criar"}
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 14.1ms | Allocations: 1375)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 87ms (Views: 54.5ms | ActiveRecord: 0.0ms | Allocations: 8942)
+
+

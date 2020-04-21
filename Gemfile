@@ -3,8 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.5'
 
+# Internacionalization for Rails
+gem 'rails-i18n', '~> 6.0.0' # For 6.0.0 or higher
+# Gem do bootstrap do rails
 gem 'twitter-bootstrap-rails'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 # Use sqlite3 as the database for Active Record
