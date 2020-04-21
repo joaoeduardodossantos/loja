@@ -6173,3 +6173,440 @@ Processing by ProdutosController#busca as HTML
 Completed 200 OK in 47ms (Views: 41.9ms | ActiveRecord: 0.4ms | Allocations: 7087)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constant BadgeLabelHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload BadgeLabelHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+This autoloaded constant has been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <top (required)> at /home/joaoeduardo/estudo/loja/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2020-04-20 23:27:20 -0300
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (1.0ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (1.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 61.4ms | Allocations: 8125)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 204ms (Views: 158.4ms | ActiveRecord: 5.5ms | Allocations: 23996)
+
+
+Started GET "/produtos/new" for 127.0.0.1 at 2020-04-20 23:27:22 -0300
+Processing by ProdutosController#new as HTML
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 77.8ms | Allocations: 3745)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 154ms (Views: 132.4ms | ActiveRecord: 0.0ms | Allocations: 10100)
+
+
+Started POST "/produtos" for 127.0.0.1 at 2020-04-20 23:27:42 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"authenticity_token"=>"cawObwuXMv2dqiEkKYDP69d10x9bckfo0Yc/fW98IJl2ajAd2md79I7Qbe1vD7Pnlz0QKNxb+N/Hf4teacbzBA==", "produto"=>{"nome"=>"Toalha", "descricao"=>"Bem bonita", "preco"=>"", "quantidade"=>"10"}, "commit"=>"Criar"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 1466)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 23:27:43 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.5ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 29.0ms | Allocations: 2563)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 58.5ms | ActiveRecord: 1.0ms | Allocations: 8877)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 23:32:52 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.7ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.6ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 39.1ms | Allocations: 7090)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 64.0ms | ActiveRecord: 3.6ms | Allocations: 14910)
+
+
+Started GET "/produtos/new" for 127.0.0.1 at 2020-04-20 23:32:54 -0300
+Processing by ProdutosController#new as HTML
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1088)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 41.4ms | ActiveRecord: 0.0ms | Allocations: 7313)
+
+
+Started POST "/produtos" for 127.0.0.1 at 2020-04-20 23:33:13 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"authenticity_token"=>"yHMrR8CMdc7+0eeGEoDRxRzlXYRX8XYu3+snc+KvuS/PtRU1EXw8x+2rq09UD63JXK2es9DYyRnJE5NQ5BVqsg==", "produto"=>{"nome"=>"Cadarço", "descricao"=>"teste", "preco"=>"", "quantidade"=>"1"}, "commit"=>"Criar"}
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1081)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 44.6ms | ActiveRecord: 0.0ms | Allocations: 8179)
+
+
+Started POST "/produtos" for 127.0.0.1 at 2020-04-20 23:33:34 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"authenticity_token"=>"T8OXcWNd4bLQOEXwAS6PMuAHF4Et/VGb2iXOkMsIWb8gmp/qqYziYNtufgAxHrA7En1zLAKHzM6mDsWQtQj1Dw==", "produto"=>{"nome"=>"Cateira", "descricao"=>"Sem dinheiro", "preco"=>"50.00", "quantidade"=>"10"}, "commit"=>"Criar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:10:in `create'
+  [1m[36mProduto Create (1.1ms)[0m  [1m[32mINSERT INTO "produtos" ("nome", "descricao", "preco", "quantidade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Cateira"], ["descricao", "Sem dinheiro"], ["preco", 50.0], ["quantidade", 10], ["created_at", "2020-04-21 02:33:34.931731"], ["updated_at", "2020-04-21 02:33:34.931731"]]
+  ↳ app/controllers/produtos_controller.rb:10:in `create'
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:10:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms (ActiveRecord: 12.2ms | Allocations: 2670)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 23:33:34 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.6ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.8ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 2741)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 37.9ms | ActiveRecord: 1.5ms | Allocations: 9046)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 23:45:25 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.8ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.8ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 35.4ms | Allocations: 7481)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 69.2ms | ActiveRecord: 1.6ms | Allocations: 16183)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 23:45:29 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.5ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (4.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 35.2ms | Allocations: 2741)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 86ms (Views: 76.5ms | ActiveRecord: 4.9ms | Allocations: 9074)
+
+
+Started DELETE "/produtos/13" for 127.0.0.1 at 2020-04-20 23:45:38 -0300
+Processing by ProdutosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BfciulEq0zXaw9vsmR2ZVUMHOjXXdlN6hQoLCK+5+XhPm3SB2BMMziRF5pIthhkL6mkWy83hiXvFmkMv2/2J2g==", "id"=>"13"}
+  [1m[36mProduto Load (2.9ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:23:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:23:in `destroy'
+  [1m[36mProduto Destroy (1.7ms)[0m  [1m[31mDELETE FROM "produtos" WHERE "produtos"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/produtos_controller.rb:23:in `destroy'
+  [1m[35m (15.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:23:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 54ms (ActiveRecord: 19.8ms | Allocations: 4454)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 23:45:38 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.6ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 17.0ms | Allocations: 2544)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 1.0ms | Allocations: 8853)
+
+
+Started DELETE "/produtos/14" for 127.0.0.1 at 2020-04-20 23:45:40 -0300
+Processing by ProdutosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GdNE/eaBGDj3/GB8jC9aj8pSg+vWQFmjm63dPvuhLXR2ikxmLFAb6vyqW4y8H2WGOCjnRvk6xPbnhtY+haGBxA==", "id"=>"14"}
+  [1m[36mProduto Load (1.0ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:23:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:23:in `destroy'
+  [1m[36mProduto Destroy (7.4ms)[0m  [1m[31mDELETE FROM "produtos" WHERE "produtos"."id" = ?[0m  [["id", 14]]
+  ↳ app/controllers/produtos_controller.rb:23:in `destroy'
+  [1m[35m (18.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:23:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 66ms (ActiveRecord: 27.3ms | Allocations: 3720)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 23:45:40 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (10.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.5ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 29.6ms | Allocations: 2534)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 140ms (Views: 127.1ms | ActiveRecord: 10.9ms | Allocations: 8844)
+
+
+Started DELETE "/produtos/15" for 127.0.0.1 at 2020-04-20 23:45:42 -0300
+Processing by ProdutosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZvFRQtBXhQXFMUJ9TDUkm7tHU4IOB5nRFDFzk8SZm8sJqFnZGoaG185neY18BRuSST03LyF9BIRoGniTupk3ew==", "id"=>"15"}
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:23:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:23:in `destroy'
+  [1m[36mProduto Destroy (6.9ms)[0m  [1m[31mDELETE FROM "produtos" WHERE "produtos"."id" = ?[0m  [["id", 15]]
+  ↳ app/controllers/produtos_controller.rb:23:in `destroy'
+  [1m[35m (26.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:23:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 53ms (ActiveRecord: 34.0ms | Allocations: 3699)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 23:45:42 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.7ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 2170)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 41.3ms | ActiveRecord: 1.0ms | Allocations: 8651)
+
+
+Started DELETE "/produtos/10" for 127.0.0.1 at 2020-04-20 23:45:48 -0300
+Processing by ProdutosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gDZ8WJ5/fruR4aqfdGWjyvgPZcIllFN89iqyo/mKyrHvb3TDVK59aZq3kW9EVZzDCnUBbwruzimKAbmjh4pmAQ==", "id"=>"10"}
+  [1m[36mProduto Load (2.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:23:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:23:in `destroy'
+  [1m[36mProduto Destroy (2.3ms)[0m  [1m[31mDELETE FROM "produtos" WHERE "produtos"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/produtos_controller.rb:23:in `destroy'
+  [1m[35m (16.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:23:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 38ms (ActiveRecord: 20.9ms | Allocations: 2954)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 23:45:48 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.5ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1967)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 34.0ms | ActiveRecord: 0.8ms | Allocations: 8274)
+
+
+Started GET "/produtos/new" for 127.0.0.1 at 2020-04-20 23:45:51 -0300
+Processing by ProdutosController#new as HTML
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 17.0ms | Allocations: 1458)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 49.9ms | ActiveRecord: 0.0ms | Allocations: 7870)
+
+
+Started POST "/produtos" for 127.0.0.1 at 2020-04-20 23:46:21 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"authenticity_token"=>"S2MZ2lJCb/8FvRmyA8WBZylVIjLytMAKc2Yw+BWjachMpSeog7Im9hbHVXtFSv1raR3hBXWdfz1lnoTbExm6VQ==", "produto"=>{"nome"=>"Mouse", "descricao"=>"ergomomico", "preco"=>"60", "quantidade"=>"10"}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:14:in `create'
+  [1m[36mProduto Create (2.0ms)[0m  [1m[32mINSERT INTO "produtos" ("nome", "descricao", "preco", "quantidade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Mouse"], ["descricao", "ergomomico"], ["preco", 60.0], ["quantidade", 10], ["created_at", "2020-04-21 02:46:21.241340"], ["updated_at", "2020-04-21 02:46:21.241340"]]
+  ↳ app/controllers/produtos_controller.rb:14:in `create'
+  [1m[35m (19.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:14:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 44ms (ActiveRecord: 21.1ms | Allocations: 3744)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 23:46:21 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.5ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:13
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:39
+  Rendered produtos/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 2155)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 36.7ms | ActiveRecord: 0.9ms | Allocations: 8466)
+
+
+Started GET "/produtos/new" for 127.0.0.1 at 2020-04-20 23:46:24 -0300
+Processing by ProdutosController#new as HTML
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1069)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.0ms | Allocations: 7321)
+
+
+Started POST "/produtos" for 127.0.0.1 at 2020-04-20 23:46:37 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"authenticity_token"=>"f6chMYx9emZ8flvPpf1SPVF7Of1/gCpQn+U0Ai58LQx4YR9DXY0zb28EFwbjci4xETP6yviplWeJHYAhKMb+kQ==", "produto"=>{"nome"=>"caneta", "descricao"=>"nao tem", "preco"=>"", "quantidade"=>"1000"}, "commit"=>"Criar"}
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1247)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 36.3ms | ActiveRecord: 0.0ms | Allocations: 8326)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 23:51:00 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.7ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:17
+  [1m[36mProduto Load (0.6ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:43
+  Rendered produtos/index.html.erb within layouts/application (Duration: 35.5ms | Allocations: 7112)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 92ms (Views: 79.7ms | ActiveRecord: 3.4ms | Allocations: 16019)
+
+
+Started GET "/produtos/new" for 127.0.0.1 at 2020-04-20 23:51:02 -0300
+Processing by ProdutosController#new as HTML
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 18.6ms | Allocations: 1452)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 88.4ms | ActiveRecord: 0.0ms | Allocations: 7865)
+
+
+Started POST "/produtos" for 127.0.0.1 at 2020-04-20 23:51:22 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"authenticity_token"=>"pTsONTsgVvxRP+r7HkwbWlMHMvcXtpw/om0q2349a3ui/TBH6tAf9UJFpjJYw2dWE0/xwJCfIwi0lZ74eIe45g==", "produto"=>{"nome"=>"Vela", "descricao"=>"com cheiro", "preco"=>"20", "quantidade"=>"10"}, "commit"=>"Criar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:14:in `create'
+  [1m[36mProduto Create (0.8ms)[0m  [1m[32mINSERT INTO "produtos" ("nome", "descricao", "preco", "quantidade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Vela"], ["descricao", "com cheiro"], ["preco", 20.0], ["quantidade", 10], ["created_at", "2020-04-21 02:51:22.490068"], ["updated_at", "2020-04-21 02:51:22.490068"]]
+  ↳ app/controllers/produtos_controller.rb:14:in `create'
+  [1m[35m (14.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:14:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 32ms (ActiveRecord: 14.9ms | Allocations: 3761)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 23:51:22 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:17
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:43
+  Rendered produtos/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 2363)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 36.4ms | ActiveRecord: 0.8ms | Allocations: 8691)
+
+
+Started DELETE "/produtos/18" for 127.0.0.1 at 2020-04-20 23:51:28 -0300
+Processing by ProdutosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qqKBFObWu53D/Foi/Sa18dmBzpYzVkcJ1wwobUs6xWHF+4mPLAe4T8iqYdLNFor4K/uqOxws2lyrJyNtNTpp0Q==", "id"=>"18"}
+  [1m[36mProduto Load (0.6ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:24:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:24:in `destroy'
+  [1m[36mProduto Destroy (3.0ms)[0m  [1m[31mDELETE FROM "produtos" WHERE "produtos"."id" = ?[0m  [["id", 18]]
+  ↳ app/controllers/produtos_controller.rb:24:in `destroy'
+  [1m[35m (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:24:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 45ms (ActiveRecord: 15.9ms | Allocations: 3073)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 23:51:28 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (1.1ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:17
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:43
+  Rendered produtos/index.html.erb within layouts/application (Duration: 51.8ms | Allocations: 2168)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 129ms (Views: 120.5ms | ActiveRecord: 1.4ms | Allocations: 8654)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 23:53:42 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:19
+  [1m[36mProduto Load (0.5ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:45
+  Rendered produtos/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 2579)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 43.0ms | ActiveRecord: 1.0ms | Allocations: 10141)
+
+
+Started DELETE "/produtos/3" for 127.0.0.1 at 2020-04-20 23:53:47 -0300
+Processing by ProdutosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wDQgPtEMaK15cq9qPvCk0uU2e++fcEjNREgLyUyO7z2+0OtcZH6gweXQIDwtyAlDue+4D4s9YZ7cSkLlgD0XJg==", "id"=>"3"}
+  [1m[36mProduto Load (0.8ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:24:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:24:in `destroy'
+  [1m[36mProduto Destroy (1.4ms)[0m  [1m[31mDELETE FROM "produtos" WHERE "produtos"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/produtos_controller.rb:24:in `destroy'
+  [1m[35m (14.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:24:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 58ms (ActiveRecord: 17.0ms | Allocations: 3727)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 23:53:47 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.6ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:19
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:45
+  Rendered produtos/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 1982)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 33.8ms | ActiveRecord: 1.0ms | Allocations: 8288)
+
+
+Started GET "/produtos/new" for 127.0.0.1 at 2020-04-20 23:53:50 -0300
+Processing by ProdutosController#new as HTML
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1451)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 44.0ms | ActiveRecord: 0.0ms | Allocations: 7858)
+
+
+Started POST "/produtos" for 127.0.0.1 at 2020-04-20 23:54:11 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"authenticity_token"=>"tYBPue7aqZEfku62QgS7Q+TXORbo8deItkpuPWE3bqyyRnHLPyrgmAzoon8Ei8dPpJ/6IW/YaL+gstoeZ429MQ==", "produto"=>{"nome"=>"Celular", "descricao"=>"Bem avancado", "preco"=>"7000", "quantidade"=>"5"}, "commit"=>"Criar"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:14:in `create'
+  [1m[36mProduto Create (1.0ms)[0m  [1m[32mINSERT INTO "produtos" ("nome", "descricao", "preco", "quantidade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Celular"], ["descricao", "Bem avancado"], ["preco", 7000.0], ["quantidade", 5], ["created_at", "2020-04-21 02:54:11.529678"], ["updated_at", "2020-04-21 02:54:11.529678"]]
+  ↳ app/controllers/produtos_controller.rb:14:in `create'
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:14:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 48ms (ActiveRecord: 15.3ms | Allocations: 3727)
+
+
+Started GET "/" for 127.0.0.1 at 2020-04-20 23:54:11 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.5ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 10]]
+  ↳ app/views/produtos/index.html.erb:19
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/produtos/index.html.erb:45
+  Rendered produtos/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 2176)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 39.9ms | ActiveRecord: 0.9ms | Allocations: 8495)
+
+
